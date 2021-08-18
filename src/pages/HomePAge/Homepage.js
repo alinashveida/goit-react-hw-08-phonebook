@@ -1,9 +1,9 @@
-import { Title, Container } from "../Homepage.styled";
+import { Title, Container } from "./Homepage.styled";
 
-const HomeView = () => (
+const HomePage = () => (
   <Container>
     <Title>Приветственная страница нашего сервиса </Title>
   </Container>
 );
 
-export default HomeView;
+export default HomePage;

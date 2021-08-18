@@ -17,9 +17,9 @@ export default function ContactsListSection() {
 
   const onDelete = (id) => dispatch(deleteContact(id), console.log(id))
 
-  useEffect(() => {
-    dispatch(fetchContactsList())
-  }, [dispatch])
+  // useEffect(() => {
+  //   dispatch(fetchContactsList())
+  // }, [dispatch])
 
   return (
     <ContactsList>

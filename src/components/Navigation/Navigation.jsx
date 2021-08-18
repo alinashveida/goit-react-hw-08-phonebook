@@ -13,7 +13,7 @@ const Navigation = () => (
       style={styles.link}
       activeStyle={styles.activeLink}
     >
-      Заметки
+      Контакты
     </NavLink>
   </nav>
 )

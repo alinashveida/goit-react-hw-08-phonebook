@@ -1,4 +1,6 @@
 import reducer from "./reducer";
+//import authSlice from './auth/auth-slice'
+import { authReducer } from "./auth";
 
 import {
   configureStore,
@@ -10,6 +12,7 @@ import logger from "redux-logger";
 const middleware = [...getDefaultMiddleware(), logger];
 
 const rootReducer = combineReducers({
+  auth: authReducer,
   contacts: reducer,
 });
 

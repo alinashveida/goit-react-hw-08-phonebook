@@ -1,16 +1,19 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 //import { authOperations } from '../redux/auth';
-import { Label, Form } from "./LoginPage.styled";
-import { logIn } from "redux/auth/auth-operation";
+import { Form, Label } from "./RegisterPage.styled";
+import { register } from "redux/auth/auth-operation";
 
-export default function LoginPage() {
+export default function RegisterView() {
   const dispatch = useDispatch();
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleChange = ({ target: { name, value } }) => {
     switch (name) {
+      case "name":
+        return setName(value);
       case "email":
         return setEmail(value);
       case "password":
@@ -22,19 +25,23 @@ export default function LoginPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(logIn({ email, password }));
+    console.log(name, email, password);
+    dispatch(register({ name, email, password }));
+    setName("");
     setEmail("");
     setPassword("");
   };
 
   return (
     <div>
-      <h1>Страница логина</h1>
+      <h1>Страница регистрации</h1>
 
-      <Form
-        onSubmit={handleSubmit}
-        //autoComplete="off"
-      >
+      <Form onSubmit={handleSubmit}>
+        <Label>
+          Имя
+          <input type="text" name="name" value={name} onChange={handleChange} />
+        </Label>
+
         <Label>
           Почта
           <input
@@ -55,7 +62,7 @@ export default function LoginPage() {
           />
         </Label>
 
-        <button type="submit">Войти</button>
+        <button type="submit">Зарегистрироваться</button>
       </Form>
     </div>
   );
