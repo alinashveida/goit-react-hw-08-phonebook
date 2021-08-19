@@ -51,9 +51,8 @@ export default function ContactForm() {
     }
 
     onSubmit({ name, number })
-    toast.success(`${name} added to contacts`, {
+    toast.success(`✔️ ${name} added to contacts`, {
       autoClose: 1000,
-      width: '1000px',
     })
 
     reset()

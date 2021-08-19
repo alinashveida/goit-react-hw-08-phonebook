@@ -46,7 +46,7 @@ export default function App() {
         </Suspense>
       </Switch>
 
-      <ToastContainer />
+      <ToastContainer style={{ width: '250px' }} />
       {/* </Container> */}
     </>
 

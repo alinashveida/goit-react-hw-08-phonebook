@@ -8,8 +8,8 @@ export const ContactItem = styled.li`
   font-size: 16px;
   color: #524f4e;
   font-weight: 600;
-  margin-right: 15px;
-  margin-left: 15px;
+  margin-right: 1px;
+  margin-left: 5px;
 `
 export const DeleteButton = styled.button`
   float: right;
