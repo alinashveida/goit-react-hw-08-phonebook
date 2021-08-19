@@ -1,11 +1,19 @@
 .link {
-  display: "inline-block";
-
-  padding: 12;
+  display: inline-block;
+  color: #f137a6;
+  padding: 30px;
   font: 700;
-  color: "#2A363B";
+  color: #2a363b;
 }
 
 .activelink {
-  color: "#E84A5F";
+  color: #e84a5f;
+}
+
+.linkText {
+  font-family: "Comfortaa", cursive;
+  font-size: 18px;
+  color: #f137a6;
+  margin-right: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0);
 }

@@ -17,9 +17,10 @@ export default function AppBar() {
   }, [dispatch]);
   return (
     <Header>
+      <Navigation />
       {isLoggedIn ? (
         <>
-          <Navigation /> <UserMenu />{" "}
+          <UserMenu />{" "}
         </>
       ) : (
         <AuthNav />

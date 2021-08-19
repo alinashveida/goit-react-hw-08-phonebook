@@ -1,6 +1,22 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import styles from './AuthNav.styles.css'
+
+const styles = {
+  link: {
+    display: 'inline-block',
+    textDecoration: 'none',
+    padding: 12,
+    fontWeight: 700,
+    color: '#000000',
+
+    fontSize: '20px',
+    fontFamily: 'Roboto Helvetica, Arial sans-serif',
+  },
+
+  activeLink: {
+    color: '#f137a6',
+  },
+}
 
 export default function AuthNav() {
   return (

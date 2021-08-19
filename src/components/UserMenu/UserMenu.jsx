@@ -1,8 +1,9 @@
-import { Name, Container, Avatar } from './UserMenu.styled'
+import { Name, Container, Button } from './UserMenu.styled'
 
 import { useDispatch, useSelector } from 'react-redux'
 import authSelector from 'redux/auth/auth-selector'
 import { logOut } from 'redux/auth/auth-operation'
+import { FcCloseUpMode } from 'react-icons/fc'
 //import { authSelectors, authOperations } from '../../redux/auth';
 //import defaultAvatar from './default-avatar.png';
 
@@ -14,10 +15,12 @@ export default function UserMenu() {
   return (
     <Container>
       {/* /<Avatar src={avatar} alt="" width="32"  /> */}
-      <Name>Добро пожаловать,{name} </Name>
-      <button type="button" onClick={() => dispatch(logOut())}>
-        Выйти
-      </button>
+      <Name>
+        Welcome {name} <FcCloseUpMode />
+      </Name>
+      <Button type="button" onClick={() => dispatch(logOut())}>
+        Log Out
+      </Button>
     </Container>
   )
 }

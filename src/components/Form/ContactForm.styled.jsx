@@ -46,7 +46,7 @@ export const ButtomSubmit = styled.button`
   letter-spacing: 2px;
   color: white;
   transition: 0.15s ease-in-out;
-
+  cursor: pointer;
   border: none;
 
   margin-left: 32%;
