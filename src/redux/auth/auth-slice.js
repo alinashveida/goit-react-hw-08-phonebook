@@ -6,6 +6,8 @@ const initialState = {
   token: null,
   isLoggedIn: false,
   isFetchingCurrent: false,
+  RegistedError: false,
+  LodinError: false,
 };
 
 const authSlice = createSlice({
@@ -14,15 +16,25 @@ const authSlice = createSlice({
   extraReducers: {
     [register.fulfilled](state, action) {
       console.log(action.payload);
+
       state.user = action.payload.user;
+
       state.token = action.payload.token;
       state.isLoggedIn = true;
+      state.RegistedError = false;
+    },
+    [register.rejected](state, action) {
+      state.RegistedError = true;
     },
 
     [logIn.fulfilled](state, action) {
       state.user = action.payload.user;
       state.token = action.payload.token;
       state.isLoggedIn = true;
+      state.LodinError = false;
+    },
+    [logIn.rejected](state, action) {
+      state.LodinError = true;
     },
 
     [logOut.fulfilled](state, action) {
@@ -30,6 +42,7 @@ const authSlice = createSlice({
       state.token = null;
       state.isLoggedIn = false;
     },
+
     [fetchCurrentUser.pending](state) {
       state.isFetchingCurrentUser = true;
     },

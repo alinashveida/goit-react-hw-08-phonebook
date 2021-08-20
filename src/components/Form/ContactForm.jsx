@@ -5,8 +5,8 @@ import React, { useState } from 'react'
 
 import { useSelector, useDispatch } from 'react-redux'
 
-import { getContacts } from '../../redux/selector'
-import { addContact } from 'redux/operation'
+import { getContacts } from '../../redux/contacts/selector'
+import { addContact } from 'redux/contacts/operation'
 
 import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'

@@ -4,8 +4,6 @@ import { useDispatch, useSelector } from 'react-redux'
 import authSelector from 'redux/auth/auth-selector'
 import { logOut } from 'redux/auth/auth-operation'
 import { FcCloseUpMode } from 'react-icons/fc'
-//import { authSelectors, authOperations } from '../../redux/auth';
-//import defaultAvatar from './default-avatar.png';
 
 export default function UserMenu() {
   const dispatch = useDispatch()
@@ -14,7 +12,6 @@ export default function UserMenu() {
 
   return (
     <Container>
-      {/* /<Avatar src={avatar} alt="" width="32"  /> */}
       <Name>
         Welcome {name} <FcCloseUpMode />
       </Name>

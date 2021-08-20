@@ -2,7 +2,7 @@ import { Title, Container } from "./Homepage.styled";
 
 const HomePage = () => (
   <Container>
-    <Title>Приветственная страница нашего сервиса </Title>
+    <Title>We've been expecting you! </Title>
   </Container>
 );
 

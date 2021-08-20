@@ -1,4 +1,4 @@
-import reducer from "./reducer";
+import reducer from "./contacts/reducer";
 //import authSlice from './auth/auth-slice'
 import { authReducer } from "./auth";
 import {
@@ -23,7 +23,7 @@ import logger from "redux-logger";
 const persistConfig = {
   key: "auth",
   storage,
-  whiteList: ["token"],
+  whiteList: ["token", "user.name"],
 };
 
 const middleware = [

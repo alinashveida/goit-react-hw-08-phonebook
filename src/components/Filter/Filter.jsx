@@ -2,9 +2,9 @@ import { Input, Label } from './Filter.styled'
 import { FaSearch } from 'react-icons/fa'
 
 import { useSelector, useDispatch } from 'react-redux'
-import action from 'redux/action'
-import { getFilter } from 'redux/selector'
-import { getFilterContacts } from 'redux/selector'
+import action from 'redux/contacts/action'
+import { getFilter } from 'redux/contacts/selector'
+import { getFilterContacts } from 'redux/contacts/selector'
 
 export default function Filter() {
   const contacts = useSelector(getFilterContacts)

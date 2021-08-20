@@ -4,12 +4,11 @@ import ContactsListSection from "../../components/ContactsList/ContactsList";
 import Filter from "../../components/Filter/Filter";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
-//import authSelector from 'redux/auth/auth-selector'
-import { fetchContactsList } from "redux/operation";
+
+import { fetchContactsList } from "redux/contacts/operation";
 
 export default function ContactsPage() {
   const dispatch = useDispatch();
-  // const isLoadingTodos = useSelector(authSelector.getLoading);
 
   useEffect(() => {
     dispatch(fetchContactsList());
